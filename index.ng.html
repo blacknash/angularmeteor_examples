@@ -2,6 +2,18 @@
 
 <p>Notación Angular : 1+2 = {{1+2}} </p>
 <p>{{main.number}}</p>
+
+<form>
+  <label>Name</label>
+  <input ng-model="newPerson.name">
+
+  <label>Age</label>
+  <input ng-model="newPerson.age">
+
+  <button ng-click="main.people.push(newPerson);newPerson = ''; ">Agregar</button>
+</form>
+
+
   
   <ul>
     <li ng-repeat="person in main.people">{{person.age}} - {{person.name}} </li>
